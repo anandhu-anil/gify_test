@@ -16,16 +16,16 @@ const HomeScreenPresenter = ({...props}) => {
   const [gifResult, updateGifResult] = React.useState(null);
 
   const searchValue = value => {
-    updateGifResult(1);
+    // updateGifResult(1);
     getGifList(value)
       .then(result => {
         if (Object.keys(result.data).length > 0) {
           props.navigation.navigate('GifListingScreen', {
             result,
           });
-          updateGifResult(null);
+          // updateGifResult(null);
         } else {
-          updateGifResult(null);
+          // updateGifResult(null);
           Alert.alert(
             'Developer Says',
             'No Results Found',
